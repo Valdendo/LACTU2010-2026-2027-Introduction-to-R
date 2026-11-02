@@ -319,8 +319,16 @@ ggplot() +
        x = "S", y = "CDF") +
   theme_minimal(base_size = 14)
 
+# Probabilités ponctuelles demandées
+probas <- c(
+  "P(S = 0)" = dbinom(0, size = n, prob = p),
+  "P(S = 1)" = 0,
+  "P(S = 2)" = 0
+)
 
-# Calcul de certaines probabilités
+print(probas)
+
+# CDF théorique de S
 F_S <- function(s) {
   sapply(s, function(x) {
     if (x < 0) return(0)
