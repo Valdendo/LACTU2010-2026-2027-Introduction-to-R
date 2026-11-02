@@ -226,7 +226,7 @@ library(ggplot2)
 set.seed(123)
 lambda <- 5     # paramètre Poisson
 q_ber  <- 0.3   # paramètre Bernoulli
-n_sims <- 1000
+n_sims <- 10000
 
 # Simulation de S
 S <- numeric(n_sims)
